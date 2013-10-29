@@ -27,5 +27,18 @@ describe ReplyParser do
     ).should eq("""This is my reply
 
                          asdfljk""")
+
+    ReplyParser.sanitize("""<div>This is my reply</div>
+
+                         asdfljk
+
+                         > Reply ABOVE THIS LINE to add a comment to this conversation
+                         
+                         asdfasdfdasfsadfdasf > asdfasdfladsdflkj
+                         > asdfasdfdsa jlk
+                         asdkfj"""
+    ).should eq("""This is my reply
+
+                         asdfljk""")
   end
 end

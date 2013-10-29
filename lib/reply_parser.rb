@@ -11,11 +11,15 @@ module ReplyParser
   end
 
   def self.remove_reply(text)
-    case text
-    when /On .+ wrote:$/m
-      text[/(.+)On .+ wrote:$/m, 1].strip
-    else
-      text
-    end
+    result = case text
+             when /(.+)On .+ wrote:$/m
+               $1
+             when /(.+)^.* Reply ABOVE THIS LINE/m
+               $1
+             else
+               text
+             end
+
+    result.strip
   end
 end
