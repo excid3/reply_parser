@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/excid3/reply_parser.png?branch=master)](https://travis-ci.org/excid3/reply_parser)
+
 # ReplyParser
 
 A Rails 4.0 email reply parser for incoming emails.
