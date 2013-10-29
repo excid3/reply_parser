@@ -1,6 +1,6 @@
 # ReplyParser
 
-TODO: Write a gem description
+A Rails 4.0 email reply parser for incoming emails.
 
 ## Installation
 
@@ -18,7 +18,10 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Using the Reply parser is pretty simple, just pass your email body
+through the sanitize method.
+
+```ReplyParser.sanitize(body)```
 
 ## Contributing
 
